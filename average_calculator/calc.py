@@ -31,5 +31,7 @@ def print_average(numbers):
 
 
 def rounded_average(numbers):
+    if len(numbers) == 0:
+        raise ValueError("cannot compute average of an empty collection")
     avg = sum(numbers) / len(numbers)
     return floor(avg)
